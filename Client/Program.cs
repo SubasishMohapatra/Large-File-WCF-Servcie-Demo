@@ -26,8 +26,10 @@ namespace Client
             //    outputStream.Close();
             //}
             long fileSize;
-            fileServiceClient.Upload("Test1", new FileStream(@"C:\Users\SUMOHAP\Desktop\TFS Error.jpg", FileMode.Open, FileAccess.Read), out fileSize);
-            Console.WriteLine($"File received{0} of size {1}", "Test1", fileSize);
+            //fileServiceClient.Upload("Test1", new FileStream(@"C:\Users\SUMOHAP\Desktop\TFS Error.jpg", FileMode.Open, FileAccess.Read), out fileSize);
+            fileServiceClient.Upload("Test1", new FileStream(@"C: \Users\SUMOHAP\Desktop\Videos\1.mp4", FileMode.Open, FileAccess.Read), out fileSize);
+            Console.WriteLine($"File received of size {fileSize}");
+            Console.ReadLine();
         }
     }
 }
